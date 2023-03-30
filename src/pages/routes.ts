@@ -1,0 +1,87 @@
+import Landing from './landing';
+import Register from './register';
+import Presales from './presales'
+type route = {
+    path:string,
+    title:string,
+    description:string,
+    requireLogin:boolean,
+    hash:boolean,
+    nav:boolean,
+    Page:Function,
+}
+const appRoutes:Array<route> = [
+    {
+        path: '/',
+        title: 'HOME',
+        description: 'Home',
+        requireLogin: true,
+        hash:false,
+        nav:true,
+        Page: Landing,
+    },
+    // {
+    //     path: '/about',
+    //     title: 'ABOUT US',
+    //     description: 'About Us',
+    //     requireLogin: true,
+    //     hash:false,
+    //     nav:true,
+    //     Page: Landing,
+    // },
+    {
+        path: '/whitepaper',
+        title: 'WHITEPAPER',
+        description: 'WHITEPAPER',
+        requireLogin: true,
+        hash:false,
+        nav:true,
+        Page: Landing,
+    },
+    {
+        path: '/tokenomic',
+        title: 'TOKENOMIC',
+        description: 'tokenomic',
+        requireLogin: true,
+        hash:false,
+        nav:true,
+        Page: Landing,
+    },
+    {
+        path: '/#roadmap',
+        title: 'ROADMAP',
+        description: 'ROADMAP',
+        requireLogin: true,
+        hash:false,
+        nav:true,
+        Page: Landing,
+    }, 
+    {
+        path: '/exchange',
+        title: 'EXCHANGE',
+        description: 'EXCHANGE',
+        requireLogin: true,
+        hash:false,
+        nav:true,
+        Page: Landing,
+    },
+    {
+        path: '/presales',
+        title: 'PRESALES',
+        description: 'PRESALES',
+        requireLogin: true,
+        hash: true,
+        nav:true,
+        Page: Presales,
+    }, 
+    {
+        path: '/register',
+        title: 'REGISTER',
+        description: 'Register',
+        requireLogin: true,
+        hash:false,
+        nav:false,
+        Page: Register,
+    }, 
+];
+export default appRoutes;
